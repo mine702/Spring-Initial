@@ -1,0 +1,13 @@
+server.port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/tft_meta?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: mine
+    password: 633ehddbs
+  jpa.show-sql: true
+  thymeleaf.cache: false
+  devtools:
+    livereload.enabled: true
+    restart.enabled: true

@@ -1,0 +1,44 @@
+#세션 타임아웃
+server.servlet.session.timeout: 60m
+
+#애플리케이션 이름, ddl 자동생성 false none, db mysql, 파일 업로드 최대 사이즈
+spring:
+  application.name: Initial
+  jpa:
+    generate-ddl: false
+    database: mysql
+    hibernate:
+      ddl-auto: none
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    properties.hibernate:
+      format_sql: true
+      lazy_load_no_trans: true
+    open-in-view: false
+
+  servlet.multipart:
+    max-file-size: 10240MB
+    max-request-size: 10240MB
+
+# jwt 토큰 isuuer, client-secret, expiry-minutes, refresh-token-expiry-days 사용자 직접 지정
+jwt.token:
+  header: authorization
+  issuer: initial
+  client-secret: 898517f7b0ac3e6a2fc5a9f935b7349db3fb561df0bcdbe23e0e4416f4971503
+  expiry-minutes: 180
+  refresh-token-expiry-days: 14
+  allow-multi-login: true
+  allow-refresh: true
+
+#메일 서비스 필요하면 사용
+
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    protocol: smtp
+#    username: mean702000@gmail.com
+#    password: wdzankkxrfacsbeg
+#    properties.mail.smtp.auth: true
+#    properties.mail.smtp.starttls.enable: true
+

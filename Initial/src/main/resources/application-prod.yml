@@ -1,0 +1,15 @@
+server.port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:
+    username:
+    password:
+  thymeleaf:
+    cache: false
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
